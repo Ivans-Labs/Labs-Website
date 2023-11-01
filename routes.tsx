@@ -3,11 +3,13 @@
 import { oak } from "./deps.ts";
 import { femtojsx, handleHtml } from "./html.tsx";
 import { Counter, HomePage } from "./components.tsx";
+import {ToolsPage} from "./tools.tsx";
 
 const router = new oak.Router();
 export default router;
 
 router.get("/", handleHtml((_) => <HomePage />));
+router.get("/tools", handleHtml((_) => <ToolsPage />));
 
 router.get(
   "/numbers/:value",

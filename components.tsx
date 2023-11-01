@@ -49,12 +49,22 @@ export function Page(props: PageProps) {
   );
 }
 
+export function Nav() {
+  return (
+    <nav class="p-3" style="border-radius: 5px; background-color: #545B68;">
+      <a href="/" class="mr-3" style="color: #FFF;">Home</a>
+      <a href="/tools" style="color: #FFF;">Tools</a>
+    </nav>
+  );
+}
+
 export function Header() {
-    return (
-        <header class="p-3" style="border-radius: 5px; background-color: #545B68;">
-            <h1>Ivan's Minimal Website</h1>
-        </header>
-    );
+  return (
+      <header class="p-3" style="border-radius: 5px; background-color: #545B68;">
+          <h1 class="mb-3">Ivan's Minimal Website</h1>
+          <Nav />
+      </header>
+  );
 }
 
 export function Footer() {
