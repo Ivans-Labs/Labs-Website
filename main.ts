@@ -1,13 +1,13 @@
-import { oak } from "./deps.ts";
-import router from "./routes.tsx";
+/// <reference no-default-lib="true" />
+/// <reference lib="dom" />
+/// <reference lib="dom.iterable" />
+/// <reference lib="dom.asynciterable" />
+/// <reference lib="deno.ns" />
 
-const app = new oak.Application();
+import "$std/dotenv/load.ts";
 
-app.use(router.allowedMethods(), router.routes());
+import { start } from "$fresh/server.ts";
+import manifest from "./fresh.gen.ts";
+import config from "./fresh.config.ts";
 
-app.addEventListener(
-  "listen",
-  (e) => console.log("Listening on https://localhost:" + e.port),
-);
-
-app.listen({ port: Number(Deno.env.get("PORT") ?? 8000) });
+await start(manifest, config);
