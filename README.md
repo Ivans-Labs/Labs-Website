@@ -1,13 +1,43 @@
-# Fresh project
+# Ivans Labs Website
 
-Your new Fresh project is ready to go. You can follow the Fresh "Getting
-Started" guide here: https://fresh.deno.dev/docs/getting-started
+Based on Deno Fresh Framework
+
+### Project Structure
+
+.
+├── .github/
+│   └── workflows/
+│       └── deno.yml
+├── .vscode/
+│   ├── settings.json
+│   └── extensions.json
+├── components/
+│   ├── Button.tsx
+│   └── ProjectsView.tsx *Displays Projects*
+├── islands/
+│   └── Counter.tsx
+├── routes/
+│   ├── api/
+│   │   └── joke.ts
+│   ├── index.tsx
+│   ├── _404.tsx
+│   ├── greet/
+│   │   └── [name].tsx
+│   └── _app.tsx
+├── static/
+│   └── favicon.ico
+├── .gitignore
+├── deno.json
+├── dev.ts
+├── fresh.config.ts
+├── fresh.gen.ts
+├── main.ts
+├── README.md
+└── twind.config.ts
 
 ### Usage
 
-Make sure to install Deno: https://deno.land/manual/getting_started/installation
-
-Then start the project:
+Start the project:
 
 ```
 deno task start
