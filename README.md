@@ -4,6 +4,7 @@ Based on Deno Fresh Framework
 
 ### Project Structure
 
+```
 .
 ├── .github/
 │   └── workflows/
@@ -34,6 +35,7 @@ Based on Deno Fresh Framework
 ├── main.ts
 ├── README.md
 └── twind.config.ts
+```
 
 ### Usage
 
