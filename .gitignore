@@ -7,3 +7,10 @@
 
 # Fresh build directory
 _fresh/
+
+# Local Dev Scripts
+
+getstruct.py
+.keys
+.test
+.scripts
