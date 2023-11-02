@@ -1,6 +1,8 @@
 # Ivans Labs Website
 
-Based on Deno Fresh Framework
+Based on [Deno Fresh Framework](https://fresh.deno.dev/)
+
+Displays all my projects, reports, and showcases.
 
 ### Project Structure
 
@@ -8,7 +10,7 @@ Based on Deno Fresh Framework
 .
 ├── .github/
 │   └── workflows/
-│       └── deno.yml
+│       └── deno.yml *Linter only*
 ├── .vscode/
 │   ├── settings.json
 │   └── extensions.json
@@ -16,10 +18,10 @@ Based on Deno Fresh Framework
 │   ├── Button.tsx
 │   └── ProjectsView.tsx *Displays Projects*
 ├── islands/
-│   └── Counter.tsx
+│   └── Counter.tsx *test*
 ├── routes/
 │   ├── api/
-│   │   └── joke.ts
+│   │   └── joke.ts *test*
 │   ├── index.tsx
 │   ├── _404.tsx
 │   ├── greet/
