@@ -12,7 +12,7 @@ export function ProjectsView() {
   const projects: Project[] = [
     {
       title: "simple-pdf-app",
-      image: "https://cdn.statically.io/gh/Sudo-Ivan/MyWebsite-Assets/main/images/website/pdfmergershowcase1.png",
+      image: "static/projects/simplepdfapp.jpg",
       githubLink: "https://github.com/Ivans-Labs/simple-pdf-app",
       version: "1.0",
       lastUpdated: "2023-03-03"
