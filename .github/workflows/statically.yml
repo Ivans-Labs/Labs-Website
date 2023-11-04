@@ -1,0 +1,33 @@
+name: Generate Static Links
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-links:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Generate links
+      shell: bash
+      run: |
+        shopt -s globstar
+        links=""
+        for file in images/**/*.{png,jpg,jpeg,svg,webp,ico}; do
+          url="https://cdn.statically.io/gh/${{ github.repository }}/main/$file"
+          links="${links}- $(basename $file)\n  $url\n\n"
+        done
+        echo -e "$links" > cdn-image-links.md
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Statically Workflow"
+        git add links.md
+        git commit -m "Add cdn-image-links.md"
+        git push origin HEAD
