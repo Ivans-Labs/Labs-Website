@@ -1,8 +1,10 @@
 # Ivans Labs Website
 
-Based on [Deno Fresh Framework](https://fresh.deno.dev/)
+A minimal and secure website to transmit minimal data to low bandwidith text-based browsers.
 
-Displays all my projects, reports, and showcases.
+Alternatively it can work on normal GUI browsers and utilize Javascript.
+
+Based on [Deno Fresh Framework](https://fresh.deno.dev/)
 
 ### Project Structure
 
@@ -10,18 +12,18 @@ Displays all my projects, reports, and showcases.
 .
 ├── .github/
 │   └── workflows/
-│       └── deno.yml *Linter only*
+│       └── deno.yml
 ├── .vscode/
 │   ├── settings.json
 │   └── extensions.json
 ├── components/
 │   ├── Button.tsx
-│   └── ProjectsView.tsx *Displays Projects*
+│   ├── ProjectsView.tsx
+│   └── NavBar.tsx
 ├── islands/
-│   └── Counter.tsx *test*
+│   └── News.tsx
 ├── routes/
-│   ├── api/
-│   │   └── joke.ts *test*
+│   ├── api
 │   ├── index.tsx
 │   ├── _404.tsx
 │   ├── greet/
