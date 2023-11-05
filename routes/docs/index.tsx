@@ -2,7 +2,7 @@
 
 import { tw } from "twind";
 import { Partial } from "$fresh/runtime.ts";
-import { Search } from "../../components/Search.tsx";
+import { Search } from "../../islands/Search.tsx";
 
 const Docs = () => {
   return (
