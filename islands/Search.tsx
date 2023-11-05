@@ -1,16 +1,34 @@
 // /components/Search.tsx
 
 import { tw } from "twind";
-import { useRef } from 'preact/hooks';
+import { useRef, useState, useEffect } from 'preact/hooks';
 import { FunctionComponent as FC } from "preact";
 
 export const Search: FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const [links, setLinks] = useState<string[]>([]);
 
-  const handleSearch = () => {
+  useEffect(() => {
+    const fetchLinks = async () => {
+      const response = await fetch('https://ivanryan.dev/');
+      const data = await response.text();
+      setLinks(data.split('\n'));
+    }
+    fetchLinks();
+  }, []);
+  
+  const handleSearch = async () => {
     if (inputRef.current) {
-      const query = inputRef.current.value;
-      // Implement your search logic here using the `query` string.
+      const query = inputRef.current.value.toLowerCase();
+
+      for(const link of links) {
+        if (link.endsWith('.txt') || link.endsWith('.csv') || link.endsWith('.md')) {
+          const response = await fetch(link);
+          const data = await response.text();
+          const results = data.toLowerCase().includes(query);
+          console.log(`Search in ${link}: ${results ? 'Found' : 'Not found'}`);
+        }
+      }
     }
   }
 
