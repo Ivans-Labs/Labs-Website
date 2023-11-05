@@ -1,8 +1,6 @@
 # Ivans Labs Website
 
-A minimal and secure website to transmit minimal data to low bandwidith text-based browsers.
-
-Alternatively it can work on normal GUI browsers and utilize Javascript.
+A Project Website implementing from scratch components and concepts.
 
 Based on [Deno Fresh Framework](https://fresh.deno.dev/)
 
