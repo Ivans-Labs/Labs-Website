@@ -1,4 +1,3 @@
-import { h } from 'preact';
 import { tw } from 'twind';
 
 export function NavBar() {
@@ -10,8 +9,8 @@ export function NavBar() {
                     <span class={tw`absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0`}></span>
                 </a>
             </li>
-            <li><a class={tw`relative block px-3 py-2 transition hover:text-teal-500`} href="/reports">Reports</a></li>
-            <li><a class={tw`relative block px-3 py-2 transition hover:text-teal-500`} href="/news">News</a></li>
+            <li><a class={tw`relative block px-3 py-2 transition hover:text-teal-500`} href="/#">Reports</a></li>
+            <li><a class={tw`relative block px-3 py-2 transition hover:text-teal-500`} href="/#">News</a></li>
             <li><a class={tw`relative block px-3 py-2 transition hover:text-teal-500`} href="/docs">Docs</a></li>
         </ul>
     );
