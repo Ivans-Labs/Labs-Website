@@ -5,7 +5,7 @@ import { News } from "../islands/News.tsx";
 
 export default function Home() {
   return (
-    <div class={tw`px-4 py-8 mx-auto bg-[#03396c] text-white min-h-screen`}>
+    <div class={tw`px-4 py-8 mx-auto bg-gray-900 text-white min-h-screen`}>
       <div class={tw`w-full flex justify-center`}>
         <NavBar />
       </div>

@@ -34,16 +34,18 @@ export function ProjectsView() {
   ];
 
   return (
-    <div class="flex flex-wrap justify-around text-white mt-12">
+    <div class="flex flex-wrap gap-4 justify-center text-white mt-12">
       {projects.map((project) => (
         <div
           key={project.title}
-          class="m-2 rounded-lg border-2 border-gray-700 p-4 max-w-sm shadow-lg bg-[#032b52]"
+          class="m-2 rounded-lg border-2 border-blue-700 p-4 max-w-sm shadow-lg bg-[#032b52] flex flex-col justify-between"
         >
-          <img src={project.image} alt={project.title} class="mb-4 rounded-lg" style={{width: '400px', height: 'max'}} />
-          <h3 class="text-lg mb-2">{project.title}</h3>
-          <p><strong>Version:</strong> {project.version}</p>
-          <p><strong>Last Updated:</strong> {project.lastUpdated}</p>
+          <div>
+            <img src={project.image} alt={project.title} class="mb-4 rounded-lg" style={{ width: '400px', height: 'max' }} />
+            <h3 class="text-lg mb-2">{project.title}</h3>
+            <p><strong>Version:</strong> {project.version}</p>
+            <p><strong>Last Updated:</strong> {project.lastUpdated}</p>
+          </div>
           <Button
             onClick={() => window.location.href = project.githubLink}
             class="mt-4"
@@ -61,7 +63,7 @@ export function Button(props: JSX.HTMLAttributes<HTMLButtonElement>) {
     <button
       {...props}
       disabled={!IS_BROWSER || props.disabled}
-      class="px-2 py-1 border-gray-700 border-2 rounded bg-black hover:bg-gray-700 transition-colors text-white"
+      class="px-2 py-1 border-blue-700 border-2 rounded bg-darkblue-900 hover:bg-blue-700 transition-colors text-white"
     />
   );
 }
